@@ -18,7 +18,7 @@ function App() {
         <div className="hero-content">
           <div className="hero-left">
             <div className="profile-image">
-              <img src="profile.jpeg" alt="Mr. Viswanath Veera Krishna" />
+              <img src={process.env.PUBLIC_URL + '/profile.jpeg'} alt="Mr. Viswanath Veera Krishna" />
             </div>
           </div>
           <div className="hero-right">

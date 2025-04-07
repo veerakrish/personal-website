@@ -5,21 +5,25 @@
 }
 
 :root {
-  --dark-blue: #1a2238;
-  --light-beige: #f2e9e4;
-  --accent-gold: #c8a951;
-  --text-light: #ffffff;
-  --text-dark: #1a2238;
+  --bg-dark: #000000;
+  --text-primary: #ffffff;
+  --text-secondary: #9ca3af;
+  --accent-color: #ffffff;
+  --section-bg: #111111;
+  --border-color: #333333;
+  --hover-color: #1a1a1a;
 }
 
 body {
-  background-color: var(--dark-blue);
+  background-color: var(--bg-dark);
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-primary);
+  line-height: 1.6;
 }
 
 .App {
-  font-family: 'Poppins', sans-serif;
-  color: var(--text-light);
-  background-color: var(--dark-blue);
+  min-height: 100vh;
+  background-color: var(--bg-dark);
 }
 
 .navbar {
@@ -30,24 +34,42 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem 10%;
-  background-color: rgba(26, 34, 56, 0.95);
+  background-color: rgba(0, 0, 0, 0.95);
   backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border-color);
   z-index: 1000;
 }
 
 .nav-brand {
   font-size: 1.8rem;
   font-weight: 700;
-  color: var(--light-beige);
+  color: var(--text-primary);
+  letter-spacing: -0.5px;
 }
 
 .nav-links a {
   margin-left: 3rem;
   text-decoration: none;
-  color: var(--light-beige);
+  color: var(--text-secondary);
   font-size: 1rem;
   font-weight: 500;
-  transition: color 0.3s;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--accent-color);
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
 }
 
 .nav-links a:hover {
@@ -58,8 +80,10 @@ body {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding: 0 10%;
-  background-color: var(--dark-blue);
+  padding: 6rem 10% 0;
+  background-color: var(--bg-dark);
+  position: relative;
+  overflow: hidden;
 }
 
 .hero-content {
@@ -84,14 +108,28 @@ body {
   width: 100%;
   height: 600px;
   overflow: hidden;
-  border-radius: 20px;
-  border: 3px solid var(--accent-gold);
+  border-radius: 4px;
+  position: relative;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  background-color: var(--section-bg);
+}
+
+.profile-image::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 100%);
+  pointer-events: none;
 }
 
 .profile-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  display: block;
 }
 
 @media (max-width: 992px) {
@@ -116,15 +154,17 @@ body {
 .hero-content h1 {
   font-size: 3.5rem;
   font-weight: 700;
-  color: var(--light-beige);
+  color: var(--text-primary);
   margin-bottom: 1rem;
-  text-align: center;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
 }
 
 .hero-content h2 {
   font-size: 2rem;
-  color: var(--accent-gold);
+  color: var(--text-secondary);
   margin-bottom: 1.5rem;
+  font-weight: 500;
 }
 
 .hero-text {
@@ -145,8 +185,24 @@ body {
   transition: transform 0.3s;
 }
 
+.cta-button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: transparent;
+  color: var(--text-primary);
+  text-decoration: none;
+  border: 1px solid var(--accent-color);
+  border-radius: 4px;
+  font-weight: 500;
+  margin-top: 2rem;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
 .cta-button:hover {
-  transform: translateY(-3px);
+  background-color: var(--accent-color);
+  color: var(--bg-dark);
+  transform: translateY(-2px);
 }
 
 .section {
@@ -161,6 +217,25 @@ body {
 .section-content {
   max-width: 1200px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.section {
+  padding: 6rem 10%;
+  background-color: var(--bg-dark);
+  border-bottom: 1px solid var(--border-color);
+  position: relative;
+}
+
+.section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border-color), transparent);
 }
 
 .section h2 {
@@ -211,10 +286,17 @@ body {
 }
 
 .experience-card {
-  background-color: rgba(242, 233, 228, 0.05);
+  background-color: var(--section-bg);
   padding: 2rem;
-  border-radius: 10px;
-  transition: transform 0.3s;
+  border-radius: 4px;
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  border-color: var(--accent-color);
 }
 
 .experience-card:hover {
