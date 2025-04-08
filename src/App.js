@@ -197,13 +197,14 @@ function App() {
             </div>
 
             <div className="project-card">
-              <h3>Market Agent - Business Assistant</h3>
-              <p>An intelligent market analysis and business assistant that helps entrepreneurs and businesses make data-driven decisions. Provides market insights, competitor analysis, and business strategy recommendations.</p>
+              <h3>Market Agent - Stock Analysis Assistant</h3>
+              <p>An AI-powered stock market analysis tool that provides detailed insights for traders and investors. Using historical market data and the Mistral LLM, it performs comprehensive analysis including price trends, support/resistance levels, volume analysis, and provides actionable trading recommendations with risk assessment.</p>
               <div className="tech-stack">
                 <span>Python</span>
-                <span>OpenAI</span>
+                <span>Mistral AI</span>
                 <span>Hugging Face</span>
-                <span>Data Analysis</span>
+                <span>Financial Analysis</span>
+                <span>Stock Market Data</span>
               </div>
               <div className="project-links">
                 <a href="https://huggingface.co/spaces/veerukhannan/marketagent" target="_blank" rel="noopener noreferrer" className="project-link">
