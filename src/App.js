@@ -10,6 +10,7 @@ function App() {
           <a href="#about">About</a>
           <a href="#education">Education</a>
           <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
           <a href="#contact">Contact</a>
         </div>
       </nav>
@@ -164,6 +165,55 @@ function App() {
                 <h4>GDRCET, Bhilai</h4>
                 <p>Assistant Professor (ECE)</p>
                 <p className="duration">2011 - 2012</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" className="section">
+        <div className="section-content">
+          <h2>Projects</h2>
+          <div className="projects-grid">
+            <div className="project-card">
+              <h3>Nyaya Mitra - Legal Assistant</h3>
+              <p>An AI-powered legal assistant that helps users understand legal concepts, documents, and procedures in simple terms. Built using advanced language models to make legal information more accessible to the public.</p>
+              <div className="tech-stack">
+                <span>Python</span>
+                <span>OpenAI</span>
+                <span>Hugging Face</span>
+                <span>Gradio</span>
+              </div>
+              <div className="project-links">
+                <a href="https://huggingface.co/spaces/veerukhannan/Nyaya-Mitra" target="_blank" rel="noopener noreferrer" className="project-link">
+                  <span>View Project</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <div className="project-card">
+              <h3>Market Agent - Business Assistant</h3>
+              <p>An intelligent market analysis and business assistant that helps entrepreneurs and businesses make data-driven decisions. Provides market insights, competitor analysis, and business strategy recommendations.</p>
+              <div className="tech-stack">
+                <span>Python</span>
+                <span>OpenAI</span>
+                <span>Hugging Face</span>
+                <span>Data Analysis</span>
+              </div>
+              <div className="project-links">
+                <a href="https://huggingface.co/spaces/veerukhannan/marketagent" target="_blank" rel="noopener noreferrer" className="project-link">
+                  <span>View Project</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </a>
               </div>
             </div>
           </div>
