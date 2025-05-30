@@ -1,0 +1,171 @@
+.content-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.section {
+  margin: 4rem 0;
+  padding: 2.5rem;
+  background-color: rgba(30, 30, 30, 0.95);
+  border-radius: 12px;
+  box-shadow: var(--section-glow);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+}
+
+.section:hover {
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.section h2 {
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  text-shadow: var(--text-glow);
+  letter-spacing: 0.5px;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.section h2:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: #3498db;
+}
+
+.section h3 {
+  color: rgba(255, 255, 255, 0.9);
+  margin: 1.5rem 0 1rem;
+  font-size: 1.4rem;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+}
+
+.experiments-list, .objectives-list {
+  list-style: none;
+  padding: 0;
+}
+
+.experiments-list li, .objectives-list li, .qualifications ul li, .expertise-areas ul li {
+  margin: 0.8rem 0;
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 5px;
+  transition: transform 0.2s;
+  list-style-type: none;
+}
+
+.experiments-list li:hover, .objectives-list li:hover {
+  transform: translateX(10px);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.qualifications li, .expertise-areas li {
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.qualifications li:hover, .expertise-areas li:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateX(5px);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.exp-number {
+  color: #3498db;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+.contact-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact-info {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.contact-info p {
+  margin: 0.5rem 0;
+}
+
+.social-links ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.social-links a {
+  color: #3498db;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.orcid-link {
+  text-decoration: underline;
+}
+
+.orcid-icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+}
+
+.social-links a:hover {
+  color: #2980b9;
+}
+
+.qualifications, .expertise-areas, .course-description {
+  margin: 2rem 0;
+}
+
+.lab-intro {
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  color: #666;
+}
+
+.about-content p {
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .section {
+    margin: 2rem 0;
+    padding: 1.5rem;
+  }
+
+  .section h2 {
+    font-size: 1.75rem;
+  }
+
+  .section h3 {
+    font-size: 1.25rem;
+  }
+}
